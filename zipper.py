@@ -6,6 +6,9 @@ def zipper(*its):
 		els = list()
 		
 		for it in its:
+			if type(it) == type({}):
+				it = list(it.keys())
+				
 			if i >= len(it):
 				status = False
 				break
